@@ -1,0 +1,110 @@
+body {
+  background-color: #7fffd4;
+  font-family: "Courier New", Courier, monospace;
+  text-align: center; /*  para que el texto se centre */
+}
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Controlo el comportamiento de las columnas */
+  grid-template-rows: auto; /* Controlo el comportamiento de las filas */
+  justify-content: flex-start; /* Para justificar las cajas dentro del contenedor */
+
+  width: 80%;
+  margin: 0 auto; /* Con esto centramos las cajas */
+  background-color: lightgreen;
+  padding: 20px;
+  border: thick solid #000;
+}
+.caja {
+  border: thin solid #000;
+  background-color: lightgray;
+  /*  margin: 15px; */
+  text-align: center;
+  line-height: 150px;
+}
+.caja2 {
+  border: thin solid #000;
+  background-color: lightgray;
+  text-align: center;
+  padding: 20px;
+}
+/* Caracteristicas en Grid para los elementos hijos con grid-column */
+.c1 {
+  grid-column: 1/4;
+  background-color: lightskyblue;
+}
+.c2 {
+  grid-column: 1/3;
+  background-color: lightyellow;
+}
+.c3 {
+  grid-column: 3/4;
+  background-color: lightsalmon;
+}
+.c10 {
+  grid-column: 1/4;
+  background-color: lightpink;
+}
+
+/* Caracteristicas en Grid para lo
+elementos hijos con grid-row */
+.grid-layout2 {
+  /*  height: 650px; */ /* Para aplicar estas medidas( grid-template-rows: 20% 10% 60% 20%;) */
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 20% 10% 60% 20%; /* Para aplicar estas medidad creamos el height */
+
+  background-color: lightgreen;
+  border: thick solid #000;
+}
+.c11 {
+  grid-column: 1 / span 2;
+  background-color: aqua;
+}
+.c12 {
+  grid-column: 1 / span 2;
+  background-color: aquamarine;
+}
+.c13 {
+  background-color: burlywood;
+}
+.c15 {
+  grid-column: 1 / span 2;
+  background-color: #2dd49c;
+}
+.grid-layout-area {
+  height: 650px;
+  display: grid;
+  grid-template-areas:
+    "cabecera cabecera"
+    "menu menu"
+    "contenido lateral"
+    "footer footer";
+  background-color: lightgreen;
+  border: thick solid #000;
+  grid-template-rows: 20% 10% auto 10%;
+  grid-template-columns: 80% auto;
+}
+.c16 {
+  grid-area: cabecera;
+  background-color: #7eee7c;
+}
+.c17 {
+  grid-area: menu;
+  background-color: #5adb58;
+}
+.c18 {
+  grid-area: contenido;
+  background-color: #268825;
+}
+.c19 {
+  grid-area: lateral;
+  background-color: #137111;
+}
+.c20 {
+  grid-area: footer;
+  background-color: #0e3c0d;
+}
